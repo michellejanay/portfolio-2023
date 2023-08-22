@@ -1,5 +1,16 @@
 import React from "react";
 
 export const Banner = () => {
-  return <div className="mt-9">Banner</div>;
+  return (
+    <>
+      <main id="home">
+        <div className="flex justify-cetner">
+          <div className="col">
+            <span className="tagline">Welcome to my Portfolio</span>
+            <h1>{`Hi I'm Michelle`} <span className="flex flex-wrap">web developer</span></h1>
+          </div>
+        </div>
+      </main>
+    </>
+  );
 };
