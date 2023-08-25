@@ -48,10 +48,10 @@ export const Banner = () => {
   return (
     <>
       <main id="home" className="min-w-full my-11">
-        <h1 className="text-xl my-3">{"Welcome to my Portfolio"}</h1>
-        <div className="flex flex-col lg:flex-row justify-center justify-evenly">
+        <h1 className="text-xl my-3 mx-3">{"Welcome to my Portfolio"}</h1>
+        <div className="flex flex-col lg:flex-row justify-center items-center justify-between">
           <div className="order-2 lg:order-1 mx-3">
-            <h1 className="text-[3em]">
+            <h1 className="text-[5em]">
               {`Hi, I'm Michelle `}
               <span className="flex flex-wrap text-[.75em]">{text}</span>
             </h1>
