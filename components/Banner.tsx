@@ -3,12 +3,16 @@ import { useState, useEffect } from "react";
 import { BiDownload, BiRightArrowAlt } from "react-icons/bi";
 
 export const Banner = () => {
-  const toRotate = ["Web Designer", "Web Developer", "Software Developer"];
+  const toRotate: string[] = [
+    "Web Designer",
+    "Web Developer",
+    "Software Developer",
+  ];
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(200 - Math.random() * 100);
-  const period = 2000;
+  const period: number = 2000;
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -20,9 +24,9 @@ export const Banner = () => {
   }, [text]);
 
   const tick = () => {
-    let i = loopNum % toRotate.length;
-    let titles = toRotate[i];
-    let updatedText = isDeleting
+    let i: number = loopNum % toRotate.length;
+    let titles: string = toRotate[i];
+    let updatedText: string = isDeleting
       ? titles.substring(0, text.length - 1)
       : titles.substring(0, text.length + 1);
 

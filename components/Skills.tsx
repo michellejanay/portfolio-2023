@@ -8,11 +8,12 @@ export const Skills = () => {
       <div className="flex justify-evenly">
         <div className="">
           <div className="flex justify-center m-6 hover:animate-spin">
-            <BiCog size="9em" />
+            <BiCog size="8em" />
           </div>
           <h3 className="text-[2em] font-bold m-6">Soft</h3>
           <ul>
             <li>Communication</li>
+            <li>Dedication</li>
             <li>Resilience</li>
             <li>Continious Learning</li>
             <li>Team work</li>
@@ -20,7 +21,7 @@ export const Skills = () => {
         </div>
         <div>
           <div className="flex justify-center m-6 hover:animate-spin">
-            <FaLaptopCode size="9em" />
+            <FaLaptopCode size="8em" />
           </div>
           <h3 className="text-[2em] font-bold m-6">Tech</h3>
           <ul>
