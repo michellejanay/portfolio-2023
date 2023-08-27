@@ -47,7 +47,7 @@ export const Banner = () => {
   };
   return (
     <>
-      <main id="home" className="min-w-full my-11">
+      <main id="home" className="min-w-full my-20">
         <h1 className="text-xl my-3 mx-3">{"Welcome to my Portfolio"}</h1>
         <div className="flex flex-col lg:flex-row justify-center items-center justify-between">
           <div className="order-2 lg:order-1 mx-3">
