@@ -14,7 +14,12 @@ export const Skills = () => {
           <div className="flex justify-center m-6 md:hover:animate-spin">
             <BiCog size="8em" />
           </div>
-          <h3 className="text-[2em] font-bold m-6 md:hover:animate-spin">Soft</h3>
+          <h3
+            className="text-[2em] font-bold m-6 
+          "
+          >
+            Soft
+          </h3>
           <ul>
             <li>Communication</li>
             <li>Dedication</li>

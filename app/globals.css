@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.cdnfonts.com/css/common-pixel");
+
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+* {
+  /* font-family: "Common Pixel", sans-serif; */
+  font-family: "VT323", monospace;
+}
 input,
 textarea {
   margin-bottom: 1em;

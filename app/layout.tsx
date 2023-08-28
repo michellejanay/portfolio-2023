@@ -1,8 +1,13 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { VT323, DotGothic16 } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const vt = VT323({ subsets: ["latin"], weight: "400" });
+
+const dotGothic = DotGothic16({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
   title: "Michelle Janay | Portfolio",
@@ -16,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className}, bg-violet-950 text-white`}>
+      <body className={`${dotGothic.className}, bg-violet-950 text-white`}>
         {children}
       </body>
       <div className="bg-violet-700 absolute -z-10 top-[-8rem] right-[0] h-[32rem] w-[32rem] rounded-full blur-[10rem]"></div>
