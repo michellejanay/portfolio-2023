@@ -5,8 +5,8 @@ import { BiLogoGithub, BiLogoLinkedinSquare } from "react-icons/bi";
 
 export const Nav = ({ navLinks }) => {
   return (
-    <nav className="min-w-full m-auto flex z-[999] fixed px-6 justify-end">
-      <ul className="flex w-1/2 m-auto justify-between">
+    <nav className="min-w-full m-auto flex z-[999] fixed px-6 py-3 justify-end">
+      <ul className="flex w-1/2 justify-between">
         {navLinks.map((link, i) => (
           <motion.li
             className="mx-2 h-3/4"

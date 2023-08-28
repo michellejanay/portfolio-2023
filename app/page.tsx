@@ -10,7 +10,7 @@ import { navLinks } from "@/lib/nav-data";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-6 font-mono flow-root ">
+    <main className="flex min-h-screen flex-col items-center justify-between font-mono flow-root ">
       <Nav navLinks={navLinks} />
       <Banner />
       <About />
