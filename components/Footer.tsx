@@ -2,7 +2,17 @@ import React from "react";
 import Link from "next/link";
 import { BiLogoGithub, BiLogoLinkedinSquare } from "react-icons/bi";
 
-export const Footer = ({ navLinks: [] }) => {
+interface NavLink {
+  text: string;
+  to: string;
+  target: string;
+}
+
+interface FooterProps {
+  navLinks: NavLink[];
+}
+
+export const Footer: React.FC<FooterProps> = ({ navLinks }) => {
   let footerLinks = navLinks.filter(
     (link) => link.text === "Linkedin" || link.text === "GitHub"
   );
