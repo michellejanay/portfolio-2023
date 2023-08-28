@@ -1,4 +1,3 @@
-"use client";
 import { useState, useEffect } from "react";
 import { BiDownload, BiRightArrowAlt } from "react-icons/bi";
 

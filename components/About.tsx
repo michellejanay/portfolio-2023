@@ -1,10 +1,8 @@
-"use client";
 import React from "react";
-
 
 export const About = () => {
   return (
-    <main className="my-[20]">
+    <main className="my-[20]" id="about">
       <p className="p-5">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
         animi nemo distinctio fugit, neque voluptatibus dolore nisi quam
@@ -17,7 +15,6 @@ export const About = () => {
         ipsum. Hic, eligendi! Officia expedita, voluptatibus optio aut nostrum
         aliquid voluptate et. Eveniet, non?
       </p>
-
     </main>
   );
 };

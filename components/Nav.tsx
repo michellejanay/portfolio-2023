@@ -1,14 +1,12 @@
-"use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { navLinks } from "@/lib/nav-data";
 import Link from "next/link";
 import { BiLogoGithub, BiLogoLinkedinSquare } from "react-icons/bi";
 
-export const DesktopNav = () => {
+export const Nav = ({ navLinks }) => {
   return (
-    <nav className="min-w-full flex justify-center z-[999] fixed px-6">
-      <ul className="flex flex-wrap min-w-full justify-cetner align-center justify-between">
+    <nav className="min-w-full m-auto flex z-[999] fixed px-6 justify-end">
+      <ul className="flex w-1/2 m-auto justify-between">
         {navLinks.map((link, i) => (
           <motion.li
             className="mx-2 h-3/4"
@@ -20,7 +18,7 @@ export const DesktopNav = () => {
             <Link
               href={link.to || "#"}
               className="w-full hover:text-violet-200 transition"
-              target="_blank"
+              target={link.target}
             >
               {link.text === "GitHub" ? (
                 <BiLogoGithub size="2em" className="" />
