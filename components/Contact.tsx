@@ -20,8 +20,8 @@ export const Contact = () => {
         <textarea
           name="message"
           id="message"
-          cols="30"
-          rows="10"
+          cols={30}
+          rows={10}
           placeholder="Message..."
           required
         />
