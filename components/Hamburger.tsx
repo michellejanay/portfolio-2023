@@ -12,7 +12,7 @@ const HamburgerMenuContainer = styled.div`
   flex-direction: row-reverse;
 `;
 
-export const Hamburger = (props) => {
+export const Hamburger = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
