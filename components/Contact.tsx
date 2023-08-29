@@ -8,7 +8,7 @@ export const Contact = () => {
       </div>
       <form
         action=""
-        className="flex bg-black p-6 rounded flex-col sm:w-3/5 lg:w-1/2 m-auto "
+        className="flex p-6 rounded flex-col sm:w-3/5 lg:w-1/2 m-auto "
       >
         <label htmlFor="first-name">First Name</label>
         <input type="text" name="first-name" required />

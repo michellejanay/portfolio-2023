@@ -2,7 +2,7 @@ import React from "react";
 
 export const About = () => {
   return (
-    <main className="my-[20]" id="about">
+    <main className="my-[20] mx-6" id="about">
       <p className="p-5">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
         animi nemo distinctio fugit, neque voluptatibus dolore nisi quam
