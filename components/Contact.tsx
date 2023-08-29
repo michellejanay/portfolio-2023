@@ -8,7 +8,7 @@ export const Contact = () => {
       </div>
       <form
         action=""
-        className="flex bg-black p-6 rounded flex-col sm:w-3/5 lg:w-1/2 m-auto "
+        className="flex p-6 rounded flex-col sm:w-3/5 lg:w-1/2 m-auto "
       >
         <label htmlFor="first-name">First Name</label>
         <input type="text" name="first-name" required />
@@ -28,6 +28,7 @@ export const Contact = () => {
         <button
           type="submit"
           className="mt-2 mb-3 mx-24 px-4 py-2 border rounded-lg"
+          disabled
         >
           Send message
         </button>

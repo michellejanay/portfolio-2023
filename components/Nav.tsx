@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BiLogoGithub, BiLogoLinkedinSquare } from "react-icons/bi";
-import Hamburger from "@/components/Hamburger";
+import Hamburger from "@/components/animations/nav/Hamburger";
 
 interface NavLink {
   text: string;

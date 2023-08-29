@@ -7,7 +7,7 @@ export const Projects = () => {
   const [prevButton, setPrevButton] = useState(false);
 
   return (
-    <>
+    <main className="mx-6">
       <h1 className="text-center mt-20 text-[3em]">Projects</h1>
       <div
         className="flex overflow-hidden overflow-x-scroll no-scrollbar snap-x scroll-smooth"
@@ -26,6 +26,6 @@ export const Projects = () => {
           </article>
         ))}
       </div>
-    </>
+    </main>
   );
 };

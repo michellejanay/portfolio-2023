@@ -1,20 +1,16 @@
 "use client";
-import { useState } from "react";
+import Spinner from "./animations/nav/Spinner";
 import { BiCog } from "react-icons/bi";
 import { FaLaptopCode } from "react-icons/fa";
 
 export const Skills = () => {
-  const [isSpinning, setIsSpinning] = useState(false);
-
   return (
     <div className="text-center my-20">
       <h1 className="text-[3em] my-3">Skills</h1>
-      <div className="flex justify-evenly">
-        <div className="">
-          <div className="flex justify-center m-6 md:hover:animate-spin">
-            <BiCog size="8em" />
-          </div>
-          <h3 className="text-[2em] font-bold m-6 md:hover:animate-spin">Soft</h3>
+      <div className="flex flex-col md:flex-row justify-evenly">
+        <div className="my-6">
+          <Spinner icon={BiCog} />
+          <h3 className={`text-[2em] font-bold m-3`}>Soft</h3>
           <ul>
             <li>Communication</li>
             <li>Dedication</li>
@@ -23,11 +19,11 @@ export const Skills = () => {
             <li>Team work</li>
           </ul>
         </div>
-        <div>
-          <div className="flex justify-center m-6 hover:animate-spin">
-            <FaLaptopCode size="8em" />
+        <div className="my-6 mt-9">
+          <div>
+            <Spinner icon={FaLaptopCode} />
           </div>
-          <h3 className="text-[2em] font-bold m-6">Tech</h3>
+          <h3 className="text-[2em] font-bold m-3">Tech</h3>
           <ul>
             <li>JavaScript/TypeScript/jQuery</li>
             <li>React/Next/Svelte</li>
