@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BiLogoGithub, BiLogoLinkedinSquare } from "react-icons/bi";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { AiOutlineClose } from "react-icons/ai";
 
 interface NavLink {
   text: string;
@@ -14,9 +16,34 @@ interface NavProps {
 }
 
 export const Nav: React.FC<NavProps> = ({ navLinks }) => {
+  const [openNav, setOpenNav] = useState(false);
   return (
-    <nav className="min-w-full m-auto flex z-[999] fixed px-6 py-3 justify-end">
-      <ul className="flex w-1/2 justify-between">
+    <nav className="py-3 md:min-w-full md:m-auto md:flex md:z-[999] md:fixed md:px-6  md:justify-end">
+      <div className="flex justify-end mx-3 md:hidden">
+        {!openNav && (
+          <RxHamburgerMenu
+            size="3em"
+            onClick={() => {
+              setOpenNav(!openNav);
+            }}
+          />
+        )}
+        {openNav && (
+          <AiOutlineClose
+            size="3em"
+            onClick={() => {
+              setOpenNav(!openNav);
+            }}
+          />
+        )}
+      </div>
+      <ul
+        className={
+          openNav
+            ? "block md:flex w-1/2 justify-between"
+            : "hidden md:flex w-1/2 justify-between"
+        }
+      >
         {navLinks.map((link, i) => (
           <motion.li
             className="mx-2 h-3/4"
