@@ -15,36 +15,12 @@ interface NavProps {
 }
 
 export const Nav: React.FC<NavProps> = ({ navLinks }) => {
-  const [openNav, setOpenNav] = useState(false);
-
   return (
-    <nav className="py-3 md:min-w-full md:m-auto md:flex md:z-[999] md:fixed md:px-6  md:justify-end">
+    <nav className="py-3 md:min-w-full md:m-auto md:flex md:z-[999] md:fixed md:px-6  md:justify-end z-[2]">
       <div className="flex justify-end mx-3 md:hidden">
         <Hamburger />
-        {/* {!openNav && (
-          <RxHamburgerMenu
-            size="3em"
-            onClick={() => {
-              setOpenNav(!openNav);
-            }}
-          />
-        )} */}
-        {/* {openNav && (
-          <AiOutlineClose
-            size="3em"
-            onClick={() => {
-              setOpenNav(!openNav);
-            }}
-          />
-        )} */}
       </div>
-      <ul
-        className={
-          openNav
-            ? "block md:flex w-1/2 justify-between"
-            : "hidden md:flex w-1/2 justify-between"
-        }
-      >
+      <ul className={"hidden md:flex w-1/2 justify-between"}>
         {navLinks.map((link, i) => (
           <motion.li
             className="mx-2 h-3/4"
