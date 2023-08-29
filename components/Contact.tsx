@@ -28,6 +28,7 @@ export const Contact = () => {
         <button
           type="submit"
           className="mt-2 mb-3 mx-24 px-4 py-2 border rounded-lg"
+          disabled
         >
           Send message
         </button>
