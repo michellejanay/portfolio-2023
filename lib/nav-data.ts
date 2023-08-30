@@ -6,7 +6,7 @@ export const navLinks = [
   { text: "GitHub", to: "https://github.com/michellejanay", target: "_blank" },
   {
     text: "Linkedin",
-    to: "https://linkedin.com/michelle-janay",
+    to: "https://linkedin.com/in/michelle-janay",
     target: "_blank",
   },
 ];
