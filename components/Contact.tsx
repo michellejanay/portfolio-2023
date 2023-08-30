@@ -48,7 +48,7 @@ export const Contact: React.FC = () => {
 
     if (isValidForm) {
       try {
-        const res = await fetch("/api/sendgrid", {
+        const res = await fetch(`${process.env.PRODUCTION_LINK}`, {
           body: JSON.stringify({
             fullName: fullName,
             from: process.env.FROM || "",
