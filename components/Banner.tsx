@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { BiDownload, BiRightArrowAlt } from "react-icons/bi";
+// import CV from "@/public/michelle-janay-cv.pdf";
 
 export const Banner = () => {
   const toRotate: string[] = [
@@ -61,18 +62,23 @@ export const Banner = () => {
               <span className="flex flex-wrap text-[.75em]">{text}</span>
             </h1>
             <div className="flex my-3">
-              <button
+              <a
+                href="/michelle-janay-cv.pdf"
+                download
+                target="_blank"
                 className="flex justify-center content-center border px-6 py-2 rounded-lg"
                 onClick={() => console.log("lets connect")}
               >
                 {"CV "} <BiDownload size="1.3em" className="mx-2" />
-              </button>
-              <button
+              </a>
+              <a
+                href="https://linkedin.com/in/michelley-janay"
+                target="_blank"
                 className="flex justify-center content-center mx-6 px-6 py-2 border rounded-lg"
                 onClick={() => console.log("lets connect")}
               >
                 {"Let's connect "} <BiRightArrowAlt size="1.5em" />
-              </button>
+              </a>
             </div>
           </div>
           <div className="order-1 lg:order-2 mx-3">
