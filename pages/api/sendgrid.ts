@@ -7,7 +7,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "POST") {
     try {
       const { fullName, email, subject, message } = req.body;
-      const msg: {} = {
+      const msg: any = {
         to: process.env.TO,
         from: process.env.FROM,
         email,
