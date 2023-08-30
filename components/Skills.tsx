@@ -4,6 +4,7 @@ import { BiCog } from "react-icons/bi";
 import { FaLaptopCode } from "react-icons/fa";
 
 export const Skills = () => {
+  
   return (
     <div className="text-center my-20">
       <h1 className="text-[3em] my-3">Skills</h1>

@@ -1,4 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+require("dotenv").config();
 
-module.exports = nextConfig
+const nextConfig = {
+  webpack: (config) => {
+    config.plugins.push(new (require("dotenv-webpack"))());
+    return config;
+  },
+};
+
+module.exports = nextConfig;
