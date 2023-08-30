@@ -54,7 +54,7 @@ export const Banner = () => {
         <h1 className="text-xl my-3 mx-3 text-center md:text-left">
           {"Welcome to my Portfolio"}
         </h1>
-        <div className="flex flex-col lg:flex-row justify-center items-center justify-between">
+        <div className="flex flex-col md:flex-row justify-center items-center justify-between">
           <div className="order-2 lg:order-1 mx-3">
             <h1 className="text-[4em]">
               {`I'm Michelle `}
