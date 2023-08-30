@@ -41,7 +41,7 @@ export const Contact: React.FC = () => {
     return isValid;
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
 
     let isValidForm = handleValidation();
