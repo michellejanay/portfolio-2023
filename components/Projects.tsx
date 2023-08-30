@@ -13,18 +13,24 @@ export const Projects = () => {
         className="flex overflow-hidden overflow-x-scroll no-scrollbar snap-x scroll-smooth"
         id="projects"
       >
-        {projects.map((project) => (
-          <article className="p-4 border rounded m-3 w-5/6">
-            <h3>{project.title}</h3>
-            <a href={project.source}>Source code</a>
-            <br />
-            <a href={project.deployment}>Deployment</a>
-            <p>
-              <span className="text-bold">Technologies:</span>{" "}
-              {project.technologies}
-            </p>
-          </article>
-        ))}
+        {projects
+          .map((project) => (
+            <article className="p-4 border rounded m-3 w-5/6">
+              <h3>{project.title}</h3>
+              <a href={project.source} target="_blank">
+                Source code
+              </a>
+              <br />
+              <a href={project.deployment} target="_blank">
+                Deployment
+              </a>
+              <p>
+                <span className="text-bold">Technologies:</span>{" "}
+                {project.technologies}
+              </p>
+            </article>
+          ))
+          .reverse()}
       </div>
     </main>
   );
