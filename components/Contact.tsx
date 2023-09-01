@@ -48,22 +48,19 @@ export const Contact: React.FC = () => {
 
     if (isValidForm) {
       try {
-        const res = await fetch(
-          `https://portfolio-2023-p4p3kebh4-michellejanay.vercel.app/api/sendgrid`,
-          {
-            body: JSON.stringify({
-              fullName: fullName,
-              from: process.env.FROM || "",
-              email: email,
-              subject: subject,
-              message: message,
-            }),
-            headers: {
-              "Content-Type": "application/json",
-            },
-            method: "POST",
-          }
-        );
+        const res = await fetch(`/api/sendgrid`, {
+          body: JSON.stringify({
+            fullName: fullName,
+            from: process.env.FROM || "",
+            email: email,
+            subject: subject,
+            message: message,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+          method: "POST",
+        });
 
         if (res.ok) {
           setFullName("");
