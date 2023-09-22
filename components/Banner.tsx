@@ -63,7 +63,7 @@ export const Banner = () => {
             </h1>
             <div className="flex my-3">
               <a
-                href="/michelle-janay-cv.pdf"
+                href="/MB-Software-Developer.pdf"
                 download
                 target="_blank"
                 className="flex justify-center content-center border px-6 py-2 rounded-lg"
