@@ -8,8 +8,8 @@ export default async function handler(
 ) {
   console.log("Data", req.body);
 
-  const API_KEY = process.env.MAILGUN_API_KEY || "YOUR_API_KEY";
-  const DOMAIN = process.env.MAILGUN_DOMAIN || "YOUR_DOMAIN_NAME";
+  const API_KEY = process.env.MAILGUN_API_KEY || "";
+  const DOMAIN = process.env.MAILGUN_DOMAIN || "";
 
   const mailgun = new Mailgun(FormData);
   const client = mailgun.client({ username: "api", key: API_KEY });
@@ -20,7 +20,7 @@ export default async function handler(
     from: "Contact Form <contact@michellejanay.dev>",
     to: "michelle.janay.dev@gmail.com",
     subject: `Hello, you have a new form submission from ${firstName} ${lastName}, sent from ${email}`,
-    text: message,
+    text: `${message}`,
   };
 
   const emailRes = await client.messages
@@ -34,5 +34,5 @@ export default async function handler(
 
   console.log(emailRes);
 
-  res.status(200).json({ text: "Contact Page" });
+  res.status(200).json({ submitted: "true" });
 }

@@ -5,14 +5,10 @@ export const Contact = () => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
   const onContactFormSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    // console.log(`
-    // fullname: ${firstName} ${lastName}
-    // email: ${email}
-    // message: ${message}
-    // `);
 
     try {
       const res = await fetch("/api/contact", {
@@ -27,12 +23,23 @@ export const Contact = () => {
           "content-type": "application/json",
         },
       });
+
+      if (res.ok) {
+        console.log("success");
+        setSubmitted(true);
+      }
     } catch (err: any) {
       console.error(err);
     }
   };
 
-  return (
+  return submitted ? (
+    <main className="p-4 m4">
+      <h1 className="text-center text-[3em]">Thank you</h1>
+      <p className="text-center">For your submission</p>
+      <p className="text-center">I will be in contact with you soon</p>
+    </main>
+  ) : (
     <main className="my-20 mx-0 px-3 py-11">
       <div className="text-center text-[3em] my-3" id="contact">
         Contact
