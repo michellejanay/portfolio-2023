@@ -16,7 +16,7 @@ interface NavProps {
 
 export const Nav: React.FC<NavProps> = ({ navLinks }) => {
   return (
-    <nav className="py-3 md:min-w-full md:m-auto md:flex md:z-[999] md:fixed md:px-6  md:justify-end z-[2]">
+    <nav className="py-3 sticky top-0 md:min-w-full md:m-auto md:flex md:z-[999] md:fixed md:px-6  md:justify-end z-[2]">
       <div className="flex justify-end mx-3 md:hidden">
         <Hamburger />
       </div>
